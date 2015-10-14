@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024, user-scalable=no">
 
-    <meta name="author" content="Julien Tanguy" />
-    <meta name="dcterms.date" content="2015-05-15" />
-    <title>Autorisation distribuée avec des macarons</title>
+        <meta name="author" content="Julien Tanguy" />
+            <meta name="dcterms.date" content="2015-10-14" />
+        <title>Autorisation distribuée avec des macarons</title>
 
     <!-- Required stylesheet -->
     <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -97,7 +97,7 @@ document.getElementById("irc").innerHTML =
 "[jtanguy] (julien.tanguy@jhome.fr): Julien Tanguy\n"+
 "[jtanguy] #humantalks #sounderbox #nantes\n"+
 "[jtanguy] sounderbox.com (Sounderbox)\n"+
-"[jtanguy] idle: 00 hours 00 minutes 0 seconds, signon at: "+moment().format("ddd, D MMM YYYY HH:MM:SS")+"\n"+
+"[jtanguy] idle: 00 hours 00 minutes 0 seconds, signon at: "+moment().format("ddd, D MMM YYYY HH:mm:ss")+"\n"+
 "[jtanguy] is logged in as jtanguy\n"+
 "[jtanguy] End of /WHOIS list.\n"+
 "</code>";
@@ -288,12 +288,23 @@ signature <span class="st">&quot;A729B1C69979EB4D40B04674C3E698D32FEB1DD0C88C0BC
 
 <h2 id="implémentations">Implémentations</h2>
 <ul>
-<li>C : <a href="https://github.com/rescrv/libmacaroons" class="uri">https://github.com/rescrv/libmacaroons</a></li>
+<li>C : <a href="https://github.com/rescrv/libmacaroons" class="uri">https://github.com/rescrv/libmacaroons</a> (+ bindings python/go)</li>
 <li>Java : <a href="https://github.com/nitram509/jmacaroons" class="uri">https://github.com/nitram509/jmacaroons</a></li>
 <li>Haskell : <a href="https://github.com/jtanguy/hmacaroons" class="uri">https://github.com/jtanguy/hmacaroons</a></li>
 <li>Node.js : <a href="https://github.com/nitram509/macaroons.js" class="uri">https://github.com/nitram509/macaroons.js</a></li>
 <li>Python : <a href="https://github.com/ecordell/pymacaroons" class="uri">https://github.com/ecordell/pymacaroons</a></li>
 <li>Rust : <a href="https://github.com/cryptosphere/rust-macaroons.git" class="uri">https://github.com/cryptosphere/rust-macaroons.git</a></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="bonus-lecture">Bonus: Lecture</h2>
+<ul>
+<li><a href="http://research.google.com/pubs/pub41892.html">Google paper on macaroons</a></li>
+<li><a href="https://air.mozilla.org/macaroons-cookies-with-contextual-caveats-for-decentralized-authorization-in-the-cloud/">Macaroons at Mozilla</a></li>
+<li><a href="http://hackingdistributed.com/2014/11/23/macaroons-in-hyperdex/">Time for better security in NoSQL</a></li>
+<li><a href="http://blog.bren2010.io/2014/12/04/macaroons.html">Google's Macaroons in five minutes or less</a></li>
+<li><a href="http://evancordell.com/2015/09/27/macaroons-101-contextual-confinement.html">Macaroons 101: Contextual Confinement</a></li>
 </ul>
 </div>
       <!-- End slides. -->
