@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <meta name="author" content="Julien Tanguy" />
+    <meta name="dcterms.date" content="2015-05-15" />
+    <title>Autorisation distribuée avec des macarons</title>
+
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+    <!-- Basic black and white print styles -->
+    <link rel="stylesheet" media="print" href="core/print.css">
+
+        <style type="text/css">
+    div.sourceCode { overflow-x: auto; }
+    table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+      margin: 0; padding: 0; vertical-align: baseline; border: none; }
+    table.sourceCode { width: 100%; line-height: 100%; }
+    td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+    td.sourceCode { padding-left: 5px; }
+    code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code > span.dt { color: #902000; } /* DataType */
+    code > span.dv { color: #40a070; } /* DecVal */
+    code > span.bn { color: #40a070; } /* BaseN */
+    code > span.fl { color: #40a070; } /* Float */
+    code > span.ch { color: #4070a0; } /* Char */
+    code > span.st { color: #4070a0; } /* String */
+    code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code > span.ot { color: #007020; } /* Other */
+    code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code > span.fu { color: #06287e; } /* Function */
+    code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    code > span.cn { color: #880000; } /* Constant */
+    code > span.sc { color: #4070a0; } /* SpecialChar */
+    code > span.vs { color: #4070a0; } /* VerbatimString */
+    code > span.ss { color: #bb6688; } /* SpecialString */
+    code > span.im { } /* Import */
+    code > span.va { color: #19177c; } /* Variable */
+    code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code > span.op { color: #666666; } /* Operator */
+    code > span.bu { } /* BuiltIn */
+    code > span.ex { } /* Extension */
+    code > span.pp { color: #bc7a00; } /* Preprocessor */
+    code > span.at { color: #7d9029; } /* Attribute */
+    code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    </style>
+    
+        
+    <style type="text/css">
+.small {
+  font-size: 0.9em;
+}
+.nowrap {
+    text-overflow: ellipsis;
+}
+    </style>
+    <!-- Required Modernizr file -->
+    <script src="modernizr.custom.js"></script>
+    <script src="moment.js"></script>
+  </head>
+  <body>
+    <div class="deck-container">
+      <!-- Begin slides. Just make elements with a class of slide. -->
+<div id="autorisation-distribuée-avec-des-macarons" class="slide section level1">
+<h1>Autorisation distribuée avec des macarons</h1>
+</div>
+<div id="identité-authentification-et-autorisation" class="slide section level1">
+<h1>Identité, authentification, et autorisation</h1>
+</div>
+<div class="slide section level1">
+
+<h2 id="identité">Identité</h2>
+<h3 id="qui-suis-je-qui-je-prétends-être">Qui suis-je ? (Qui je prétends être ?)</h3>
+<pre style="font-size: 0.8em;" id="irc"></pre>
+<script>
+document.getElementById("irc").innerHTML =
+"<code>"+
+"[jtanguy] (julien.tanguy@jhome.fr): Julien Tanguy\n"+
+"[jtanguy] #humantalks #sounderbox #nantes\n"+
+"[jtanguy] sounderbox.com (Sounderbox)\n"+
+"[jtanguy] idle: 00 hours 00 minutes 0 seconds, signon at: "+moment().format("ddd, D MMM YYYY HH:MM:SS")+"\n"+
+"[jtanguy] is logged in as jtanguy\n"+
+"[jtanguy] End of /WHOIS list.\n"+
+"</code>";
+</script>
+</div>
+<div class="slide section level1">
+
+<h2 id="authentification">Authentification</h2>
+<h3 id="suis-je-réellement-celui-que-je-prétends-être">Suis-je réellement celui que je prétends être ?</h3>
+<ul>
+<li><p>Password</p></li>
+<li><p>OTP</p></li>
+<li><p><del>Biométrie</del></p></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="autorisation">Autorisation</h2>
+<h3 id="quai-je-le-droit-de-faire">Qu'ai-je le droit de faire ?</h3>
+<div class="figure">
+<img src="img/github-permissions.png" alt="" />
+
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="moyens-dautorisation">Moyens d'autorisation</h2>
+<ul>
+<li>tokens OAuth</li>
+<li>assertions SAML/OpenID</li>
+<li>URLs non listées</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="oauth">OAuth</h2>
+<ul>
+<li><p><a href="http://code.tutsplus.com/articles/oauth-20-the-good-the-bad-the-ugly--net-33216">OAuth 2.0 - The Good, The Bad &amp; The Ugly</a></p></li>
+<li><p><a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/">OAuth 2.0 and the Road to Hell</a></p></li>
+</ul>
+<h3 id="fun-fact">Fun fact</h3>
+<p>L'auteur principal de OAuth 2.0, Eran Hammer, s'est retiré du projet et a demandé à ce que son nom soit supprimé de la spec.</p>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="img/macaroons.jpg" alt="Ceci n&#39;est pas un tas de macarons" />
+<p class="caption">Ceci n'est pas un tas de macarons</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="anatomie">Anatomie</h2>
+<h3 id="privé">Privé</h3>
+<ul>
+<li>secret : nonce</li>
+</ul>
+<h3 id="public">Public</h3>
+<ul>
+<li><p>identifier : lien vers le secret</p></li>
+<li><p>location : URL</p></li>
+<li><p>signature : <span class="math inline"><em>H</em><em>M</em><em>A</em><em>C</em>(<em>s</em><em>e</em><em>c</em><em>r</em><em>e</em><em>t</em>, <em>i</em><em>d</em><em>e</em><em>n</em><em>t</em><em>i</em><em>f</em><em>i</em><em>e</em><em>r</em>)</span></p></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="exemple">Exemple</h2>
+<div class="sourceCode"><pre class="sourceCode haskell nowrap small"><code class="sourceCode haskell"><span class="fu">&gt;</span> <span class="kw">let</span> m <span class="fu">=</span> create <span class="st">&quot;random secret key&quot;</span>
+                 <span class="st">&quot;we used our secret&quot;</span>
+                 <span class="st">&quot;http://filecloud.com&quot;</span>
+<span class="fu">&gt;</span> inspect m
+location <span class="st">&quot;http://filecloud.com&quot;</span>
+identifier <span class="st">&quot;we used our secret&quot;</span>
+
+signature <span class="st">&quot;ACD99D7B0A278FB85657E9E4972F4BF69C78A1FBFE748FBBABCBA46EC0BED397&quot;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<h2 id="macaron-nu">Macaron nu</h2>
+<ul>
+<li><p>Permissif</p></li>
+<li><p>Root token</p></li>
+</ul>
+<div class="slide">
+<h3 id="restriction-dun-macaron">Restriction d'un macaron</h3>
+<div class="slide">
+<ul>
+<li>Caveats
+</div></li>
+</ul>
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="caveats">Caveats</h2>
+<h3 id="restriction-dun-macaron-par-ajout-de-propriétéscontraintes.">Restriction d'un macaron par ajout de propriétés/contraintes.</h3>
+<ul>
+<li>time &lt;
+<script>document.write(moment().add(10,'m').format());</script></li>
+<li>account = 1234567</li>
+<li>path startsWith &quot;public/&quot;</li>
+<li>...</li>
+</ul>
+<div class="slide">
+<h3 id="deux-types">Deux types</h3>
+<ul>
+<li>First party</li>
+<li>Third party</li>
+</ul>
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="exemple-1">Exemple</h2>
+<div class="sourceCode"><pre class="sourceCode haskell nowrap small"><code class="sourceCode haskell"><span class="fu">&gt;</span> secret m
+<span class="st">&quot;ACD99D7B0A278FB85657E9E4972F4BF69C78A1FBFE748FBBABCBA46EC0BED397&quot;</span>
+
+<span class="fu">&gt;</span> <span class="kw">let</span> m&#39;<span class="fu">=</span> addFirstPartyCaveat <span class="st">&quot;account = alice&quot;</span> m
+<span class="fu">&gt;</span> inspect m&#39;
+location <span class="st">&quot;http://filecloud.com&quot;</span>
+identifier <span class="st">&quot;we used our secret&quot;</span>
+cid <span class="st">&quot;account = alice&quot;</span>
+signature <span class="st">&quot;48D0DA8B1191F503434EF9D01ECE5140F31C5AA3FD525E69DBCFC8CB34D59FD4&quot;</span>
+
+<span class="fu">&gt;</span> <span class="kw">let</span> m&#39;&#39; <span class="fu">=</span> addFirstPartyCaveat <span class="st">&quot;account = bob&quot;</span> m
+<span class="fu">&gt;</span> inspect m&#39;&#39;
+location <span class="st">&quot;http://filecloud.com&quot;</span>
+identifier <span class="st">&quot;we used our secret&quot;</span>
+cid <span class="st">&quot;account = bob&quot;</span>
+signature <span class="st">&quot;A729B1C69979EB4D40B04674C3E698D32FEB1DD0C88C0BC311EDC0B5258D3E49&quot;</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<h2 id="signatures">Signatures</h2>
+<ul>
+<li>Initial Macaron : <code>sig = HMAC(secret,identifier)</code></li>
+<li>Pour chaque caveat : <code>sig' = HMAC(sig,cid)</code></li>
+</ul>
+<div class="slide">
+<h3 id="hmac-chainés">HMAC chainés</h3>
+<ul>
+<li>L'ordre est important</li>
+<li>On ne peut pas retirer un caveat (non-inversibilité de HMAC)</li>
+<li>On peut en ajouter sans nécessité de connaitre le secret</li>
+</ul>
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="first-party-vs-third-party">First party vs Third party</h2>
+<h3 id="first-party">First party</h3>
+<ul>
+<li>cid : assertion</li>
+</ul>
+<h3 id="third-party">Third party</h3>
+<h4 id="privé-1">Privé</h4>
+<p>Partagé entre nous et le service tiers</p>
+<ul>
+<li>caveat_key : secret</li>
+<li>assertion</li>
+</ul>
+<h4 id="public-1">Public</h4>
+<ul>
+<li>cl : Identifiant/url du service tiers</li>
+<li>cid : identifiant permettant de retrouver (caveat_key,assertion)</li>
+<li>vid : <code>encrypt(sig,caveat_key)</code></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="vérification-dun-macaron-m">Vérification d'un macaron <code>M</code></h2>
+<ul>
+<li>Signature : La chaine de signatures est respectée</li>
+<li>Caveats
+<ul>
+<li>First party : fonction <code>verify(cid)</code></li>
+<li>Third party :
+<ol style="list-style-type: decimal">
+<li>Le tiers fournit un macaron de décharge <code>D = macaron@(cl,caveat_key, identifier)</code></li>
+<li>Le macaron <code>D</code> est lié à <code>M</code>: <code>D' = bind(D,M)</code></li>
+<li><code>M</code> est envoyé avec <code>D'</code></li>
+<li>Le caveat est vérifié avec les décharges</li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="implémentations">Implémentations</h2>
+<ul>
+<li>C : <a href="https://github.com/rescrv/libmacaroons" class="uri">https://github.com/rescrv/libmacaroons</a></li>
+<li>Java : <a href="https://github.com/nitram509/jmacaroons" class="uri">https://github.com/nitram509/jmacaroons</a></li>
+<li>Haskell : <a href="https://github.com/jtanguy/hmacaroons" class="uri">https://github.com/jtanguy/hmacaroons</a></li>
+<li>Node.js : <a href="https://github.com/nitram509/macaroons.js" class="uri">https://github.com/nitram509/macaroons.js</a></li>
+<li>Python : <a href="https://github.com/ecordell/pymacaroons" class="uri">https://github.com/ecordell/pymacaroons</a></li>
+<li>Rust : <a href="https://github.com/cryptosphere/rust-macaroons.git" class="uri">https://github.com/cryptosphere/rust-macaroons.git</a></li>
+</ul>
+</div>
+      <!-- End slides. -->
+
+      <!-- Begin extension snippets. Add or remove as needed. -->
+
+      <!-- deck.status snippet -->
+      <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+      </p>
+
+      <!-- End extension snippets. -->
+    </div>
+
+    <!-- Required JS files. -->
+    <script src="jquery.min.js"></script>
+    <script src="core/deck.core.js"></script>
+
+    <!-- Extension JS files. Add or remove as needed. -->
+    <script src="extensions/menu/deck.menu.js"></script>
+    <script src="extensions/status/deck.status.js"></script>
+    <script src="extensions/scale/deck.scale.js"></script>
+
+    <!-- Initialize the deck. You can put this in an external file if desired. -->
+    <script>
+$(function() {
+  $.deck('.slide');
+});
+    </script>
+  </body>
+</html>
