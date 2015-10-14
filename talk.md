@@ -231,7 +231,7 @@ Partagé entre nous et le service tiers
 
 ------------------------------------------------------------------
 
-## Lecture
+## Bonus: Lecture
 
 - [Google paper on macaroons](http://research.google.com/pubs/pub41892.html)
 - [Macaroons at Mozilla](https://air.mozilla.org/macaroons-cookies-with-contextual-caveats-for-decentralized-authorization-in-the-cloud/)
